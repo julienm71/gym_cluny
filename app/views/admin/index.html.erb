@@ -1,0 +1,25 @@
+<h2 class="text-center mt-3">PANEL ADMINISTRATEUR</h2>
+<div class="container mb-5 background-standard">
+  <div class="row-fluid flex-between">
+    <h2>Gestion des postes</h2>
+    <%= link_to '<i class="fa fa-plus"></i> Nouveau poste'.html_safe, new_post_path, class: "btn btn-flat" %>
+  </div>
+  <hr>
+  <div class="row-fluid flex">
+    <% @posts.each do |post| %>
+      <div class="card-product">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
+        <div class="card-product-infos">
+          <h2><%= post.titre.first(25) %>...</h2>
+          <p><strong><%= post.titre_secondaire.first(25) %></strong>...</p>
+          <p><%= post.description.first(25) %>...</p>
+        </div>
+        <ul>
+          <li><%= link_to "",  post_path(post), title: "Voir ce poste", :class => "fa fa-eye" %></li>
+          <li><%= link_to "",  edit_post_path(post), title: "Modifier ce poste", :class => "fa fa-pencil-alt" %></li>
+          <li><%= link_to "", post_path(post), method: :delete, title: "Supprimer ce poste", data: { confirm: "Etes vous sur de vouloir supprimer ce poste ?" }, :class => "far fa-trash-alt"%></li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+</div>

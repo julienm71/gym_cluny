@@ -1,0 +1,19 @@
+<div class="container mb-5 background-standard">
+  <h2>Liste des postes</h2>
+  <hr>
+  <div class="row-fluid flex">
+    <% @posts.each do |post| %>
+      <div class="card-product">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
+        <div class="card-product-infos">
+          <h2><%= post.titre.first(25) %>...</h2>
+          <p><strong><%= post.titre_secondaire.first(25) %></strong>...</p>
+          <p><%= post.description.first(25) %>...</p>
+        </div>
+        <ul>
+          <li><%= link_to "Voir ce poste",  post_path(post), title: "Voir ce poste", :class => "btn btn-flat" %></li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+</div>

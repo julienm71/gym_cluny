@@ -1,0 +1,28 @@
+.flex {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.flex-between {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.flex-around {
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.background-standard {
+  background:rgb(255, 255, 255) none repeat scroll 0% 0%;
+  padding: 10px 20px;
+  margin-top:20px;
+  border-radius: 4px;
+  transition: all 0.5s ease-in-out;
+}

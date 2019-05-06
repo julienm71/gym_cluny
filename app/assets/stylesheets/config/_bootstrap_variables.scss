@@ -23,3 +23,14 @@ $border-radius-lg: 2px;
 $border-radius-sm: 2px;
 
 // Override other variables below!
+.btn {
+  color:white !important;
+}
+
+.modal-footer {
+  justify-content:space-between !important
+}
+
+.navbar {
+  padding: 0rem 1rem !important;
+}

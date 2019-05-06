@@ -1,6 +1,17 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home]
+  def acceuil
+    @current_page = 'acceuil'
+  end
 
-  def home
+  def horaires
+    @current_page = 'horaires'
+  end
+
+  def tarifs
+    @current_page = 'tarifs'
+  end
+
+  def sports
+    @current_page = 'sports'
   end
 end
